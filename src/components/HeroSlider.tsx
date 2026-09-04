@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 // Inclinaison de la carte, desktop uniquement. Une seule valeur a changer.
-const TILT = "lg:rotate-[-10deg] lg:scale-95";
+const TILT = "lg:rotate-[0deg] lg:scale-95";
 const DELAY = 4500;
 const FADE = 1100; // duree du fondu, en ms
 

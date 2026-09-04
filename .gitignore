@@ -42,3 +42,6 @@ next-env.d.ts
 
 # assets non utilisés, hors build
 _unused/
+
+# captures envoyees dans la conversation, hors projet
+Claude outputs/
