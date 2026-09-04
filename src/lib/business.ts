@@ -1,10 +1,16 @@
+// L'URL publique réelle du site. NEXT_PUBLIC_SITE_URL permet de la surcharger
+// (domaine définitif du client) sans toucher au code.
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://test-psi-bice-48.vercel.app"
+).replace(/\/$/, "");
+
 export const business = {
   name: "Couverture Vasseur",
   founder: "Julien Vasseur",
   phone: "02 41 87 34 12",
   phoneHref: "tel:+33241873412",
   email: "contact@couverture-vasseur.fr",
-  siteUrl: "https://couverture-vasseur.fr",
+  siteUrl: SITE_URL,
   address: {
     street: "14 rue des Ardoisiers",
     postalCode: "49000",

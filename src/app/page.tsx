@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description:
       "Julien Vasseur et son équipe refont, réparent et entretiennent les toitures à Angers et dans un rayon de 30 km. Ardoise naturelle, décennale AXA, devis gratuit sous 48 h.",
     url: "/",
-    images: [{ url: "/images/hero.png", width: 1600, height: 1067 }],
+    images: [{ url: "/images/og-couverture-vasseur-angers.png", width: 1600, height: 1067 }],
   },
 };
 
@@ -80,21 +80,21 @@ const realisations = [
     text: "Toiture ardoise de 95 m² sur une maison à pans de bois du XVIIe, charpente partiellement reprise, ardoises d'origine remplacées à l'identique après validation des Bâtiments de France.",
   },
   {
-    image: "/images/Fuit_de_eau.jpg",
+    image: "/images/recherche-fuite-solin-cheminee-angers.jpg",
     alt: "Compagnon couvreur appliquant un produit d'étanchéité sur un point sensible de la toiture",
     title: "Recherche de fuite",
     place: "Rue Saint-Aubin, Angers",
     text: "Fuite récurrente signalée depuis six mois par le syndic, jamais localisée. Le problème venait d'un solin de cheminée descellé, invisible depuis l'intérieur des combles.",
   },
   {
-    image: "/images/project.jpg",
+    image: "/images/zinguerie-gouttiere-zinc-trelaze.jpg",
     alt: "Couvreurs posant des tuiles sur une toiture en cours de rénovation, échafaudage en place",
     title: "Zinguerie complète",
     place: "Trélazé",
     text: "Remplacement de 40 mètres linéaires de gouttières en zinc, chéneaux encaissés refaits pour stopper les infiltrations en façade constatées chaque automne.",
   },
   {
-    image: "/images/corver_jacquin_1727540945.jpg",
+    image: "/images/demoussage-toiture-ardoise-beaucouze.jpg",
     alt: "Toiture en ardoise après démoussage et traitement hydrofuge à Beaucouzé",
     title: "Démoussage et hydrofuge",
     place: "Beaucouzé",
@@ -323,7 +323,7 @@ export default function Home() {
               </div>
               <div className="absolute -bottom-6 -left-6 z-10 h-[48%] w-[58%] rotate-2 overflow-hidden border-[6px] border-white shadow-2xl sm:-bottom-8 sm:-left-8">
                 <Image
-                  src="/images/cathedrale_nordouest.jpg"
+                  src="/images/toits-ardoise-centre-historique-angers.jpg"
                   alt="Vue aérienne des toits en ardoise du centre historique d'Angers"
                   fill
                   sizes="(min-width: 1024px) 26vw, 52vw"
@@ -355,6 +355,83 @@ export default function Home() {
               épaisseur choisis selon l&apos;exposition, en composant avec les exigences de
               teinte des Bâtiments de France en centre historique.
             </p>
+            <p className="mt-4 text-slate">
+              Concrètement, une couverture en ardoise naturelle correctement posée tient
+              couramment 80 à 100 ans. Ce n&apos;est presque jamais la pierre qui lâche en
+              premier : c&apos;est la fixation, le zinc des noues et des solins, et le bois qui
+              la porte. Sur les toitures que nous ouvrons à Angers, l&apos;ardoise d&apos;origine
+              est souvent encore saine à plus de la moitié — nous en réemployons une partie
+              quand la teinte et l&apos;épaisseur le permettent, ce que les Bâtiments de France
+              apprécient en secteur protégé et ce qui allège votre devis.
+            </p>
+            <p className="mt-4 text-slate">
+              L&apos;ardoise synthétique et le fibrociment existent, coûtent moins cher et se
+              posent plus vite. Nous les proposons sur certaines constructions récentes hors
+              secteur protégé, en expliquant l&apos;écart plutôt qu&apos;en le taisant : trente à
+              quarante ans de durée de vie contre quatre-vingts. Sur l&apos;échelle d&apos;une
+              maison, le calcul n&apos;est pas celui qu&apos;on croit au moment de signer.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Le bâti angevin */}
+      <section id="bati" className="scroll-mt-20 border-t border-slate-light bg-paper">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+          <Reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+              Le bâti local
+            </p>
+            <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
+              Un toit par époque, du centre historique à la périphérie
+            </h2>
+            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2">
+              <div className="space-y-4 text-slate">
+                <p>
+                  Angers n&apos;a pas un bâti, elle en a quatre, et chacun pose des questions
+                  différentes une fois qu&apos;on est sur le toit. Dans le centre ancien — la
+                  Doutre, le quartier de la Cité, les rues qui descendent vers la Maine — les
+                  maisons de ville sont mitoyennes, hautes, à forte pente, couvertes en ardoise
+                  naturelle avec des lucarnes et des souches de cheminée nombreuses. Ce sont les
+                  toitures les plus techniques : chaque point singulier demande un traitement à
+                  part, l&apos;échafaudage se monte souvent sur voirie, et la teinte de
+                  l&apos;ardoise se discute avec les Bâtiments de France.
+                </p>
+                <p>
+                  La couronne des faubourgs — Saint-Serge, Madeleine, Justices — aligne des
+                  maisons bourgeoises de la fin du XIX<sup>e</sup> et du début du XX<sup>e</sup>,
+                  ardoise également, mais avec des combles souvent aménagés depuis. Sur ces
+                  maisons, l&apos;enjeu n&apos;est pas seulement la couverture : c&apos;est
+                  l&apos;écran de sous-toiture, presque toujours absent à l&apos;origine, et
+                  l&apos;isolation posée dans les années 1980 sans pare-vapeur, qui finit par
+                  gorger la charpente d&apos;humidité.
+                </p>
+              </div>
+              <div className="space-y-4 text-slate">
+                <p>
+                  Les quartiers pavillonnaires construits entre 1960 et 1990, à Angers comme à
+                  Avrillé, Beaucouzé ou Écouflant, ont massivement adopté la tuile mécanique en
+                  terre cuite ou en béton, sur charpente industrielle. Ces toitures arrivent
+                  aujourd&apos;hui au bout de leur premier cycle : la tuile béton se
+                  désagrège en surface après quarante ans, les fixations lâchent sur les rives
+                  exposées à l&apos;ouest, et la sous-toiture d&apos;origine, quand il y en a une,
+                  est devenue poreuse.
+                </p>
+                <p>
+                  Enfin, les constructions des années 2000 et suivantes, en tuile ou en ardoise
+                  fibrociment, sont encore jeunes. Elles ne demandent pas de réfection mais
+                  souffrent d&apos;un défaut d&apos;entretien : personne ne pense à faire
+                  vérifier une toiture de quinze ans, et c&apos;est pourtant l&apos;âge où un
+                  démoussage et une reprise de zinguerie coûtent quelques centaines
+                  d&apos;euros au lieu de quelques milliers dix ans plus tard.
+                </p>
+                <p>
+                  Savoir à quelle famille appartient votre maison change tout le reste : le
+                  matériau qu&apos;on vous proposera, le temps de chantier, les autorisations à
+                  déposer et le prix. C&apos;est la première chose que nous regardons en arrivant.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -446,7 +523,7 @@ export default function Home() {
       </section>
 
       {/* Prestations */}
-      <section className="border-t border-slate-light bg-paper">
+      <section id="prestations" className="scroll-mt-20 border-t border-slate-light bg-paper">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
           <Reveal>
             <p className="mb-4 text-xs font-semibold text-center uppercase tracking-[0.2em] text-slate">
@@ -459,12 +536,21 @@ export default function Home() {
               De la réfection complète à l&apos;entretien courant, une équipe unique pour
               suivre votre toiture dans la durée.
             </p>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-slate">
+              Nous couvrons l&apos;ensemble du métier plutôt qu&apos;une seule prestation, pour
+              une raison simple : une fuite se répare rarement toute seule. Derrière une
+              infiltration signalée au plafond, il y a souvent un solin à refaire, une gouttière
+              à reprendre et une mousse à traiter — trois interventions que nous préférons mener
+              dans le même déplacement, plutôt que de vous renvoyer vers trois entreprises
+              différentes.
+            </p>
           </Reveal>
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 40}>
                 <div
-                  className={`group h-full border border-slate-light bg-white p-6 shadow-sm transition-all duration-300 hover:rotate-0 hover:border-blue hover:shadow-lg ${cardTilts[i]}`}
+                  id={s.slug}
+                  className={`group h-full scroll-mt-24 border border-slate-light bg-white p-6 shadow-sm transition-all duration-300 hover:rotate-0 hover:border-blue hover:shadow-lg ${cardTilts[i]}`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="text-blue transition-colors group-hover:text-ink">
@@ -554,7 +640,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal className={`relative aspect-[4/3] w-full overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/chantier-toiture-velux.webp"
+              src="/images/artisan-julien.jpg"
               alt="Julien Vasseur, artisan couvreur, en intervention sur une toiture"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
@@ -576,7 +662,16 @@ export default function Home() {
             <p className="mt-4 text-slate">
               La personne qui monte sur votre toit est aussi celle qui a établi le devis et sera
               responsable de la réception des travaux avec vous. Pas de sous-traitant inconnu au
-              moment de signer.
+              moment de signer, pas d&apos;équipe qui change entre la visite et le chantier.
+            </p>
+            <p className="mt-4 text-slate">
+              Concrètement, cela veut dire qu&apos;un seul numéro répond du premier appel
+              jusqu&apos;à la garantie décennale, et que la personne au bout du fil sait de quel
+              toit vous parlez. Cela veut dire aussi que nous refusons des chantiers : quand le
+              planning est plein, nous le disons plutôt que de sous-traiter à une équipe que nous
+              ne connaissons pas. C&apos;est la raison pour laquelle nous ne traitons qu&apos;une
+              trentaine de réfections complètes par an — le rythme que quatre personnes peuvent
+              tenir sans dégrader la finition.
             </p>
             <ul className="mt-8 flex flex-wrap gap-3">
               {artisanBadges.map((b, i) => (
@@ -617,48 +712,161 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-2">
-            <Reveal>
-              <h3 className="font-display-italic text-2xl text-ink">Ce qui fait le prix</h3>
-              <div className="mt-8 space-y-6">
-                {priceFactors.map((f, i) => (
-                  <div key={f.title} className="flex gap-4 border-t border-slate-light pt-4">
-                    <span className="mt-0.5 text-blue">{priceFactorIcons[i]}</span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink">{f.title}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-slate">{f.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 flex items-start gap-2 text-sm text-slate">
-                <IconEuro className="mt-0.5 h-5 w-5 shrink-0 text-blue" />
-                <span>
-                  À titre indicatif, une réfection complète en ardoise se situe le plus souvent{" "}
-                  <strong className="text-ink">entre 12 000 et 28 000 euros</strong>.
-                </span>
-              </p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h3 className="font-display-italic text-2xl text-ink">Nos garanties</h3>
-              <div className="mt-8 space-y-6">
-                {guarantees.map((g, i) => (
-                  <div key={g.title} className="flex gap-4 border-t border-slate-light pt-4">
-                    <span className="mt-0.5 text-blue">{guaranteeIcons[i]}</span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink">{g.title}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-slate">{g.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
+        </div>
+      </section>
+
+      {/* Prix */}
+      <section id="prix" className="scroll-mt-20 border-t border-slate-light bg-paper">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+          <Reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+              Budget
+            </p>
+            <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
+              Ce que coûte une toiture, et ce qui fait varier le prix
+            </h2>
+            <p className="mt-6 max-w-3xl text-slate">
+              Beaucoup de couvreurs évitent le sujet jusqu&apos;à la visite. Nous préférons
+              donner des ordres de grandeur tout de suite, quitte à les préciser ensuite : à
+              Angers, une <strong className="text-ink">réfection complète en ardoise naturelle</strong>{" "}
+              sur une maison de ville se situe le plus souvent{" "}
+              <strong className="text-ink">entre 12 000 et 28 000 euros</strong>, pose,
+              échafaudage et évacuation compris. Une reprise ciblée — quelques ardoises, un
+              solin, un faîtage à refaire — reste dans une fourchette de 800 à 3 000 euros
+              selon l&apos;accès. Une recherche de fuite seule se facture le plus souvent entre
+              250 et 600 euros, déduite du chantier si vous nous confiez la réparation.
+            </p>
+            <p className="mt-4 max-w-3xl text-slate">
+              Ces chiffres ne remplacent pas un devis : ils servent à savoir si votre projet
+              tient dans votre budget avant même de nous appeler. Quatre facteurs expliquent
+              l&apos;essentiel de l&apos;écart entre deux devis pour une surface comparable.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+            {priceFactors.map((f, i) => (
+              <Reveal key={f.title} delay={i * 40} className="flex gap-4 border-t border-slate-light pt-5">
+                <span className="mt-0.5 text-blue">{priceFactorIcons[i]}</span>
+                <div>
+                  <h3 className="text-base font-semibold text-ink">{f.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">{f.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <p className="mt-10 flex items-start gap-2 max-w-3xl text-sm text-slate">
+              <IconEuro className="mt-0.5 h-5 w-5 shrink-0 text-blue" />
+              <span>
+                Le devis est gratuit, détaillé poste par poste — dépose, matériaux,
+                échafaudage, évacuation des déchets, main d&apos;œuvre — et valable trois mois.
+                Aucun poste n&apos;est ajouté en cours de chantier sans un avenant que vous
+                signez : si la charpente se révèle abîmée une fois la couverture ouverte, nous
+                vous montrons la zone en photo et vous chiffrons la reprise avant de continuer.
+              </span>
+            </p>
+            <a
+              href="#devis"
+              className="btn-skew mt-8 inline-block bg-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark"
+            >
+              Obtenir le chiffre exact pour ma toiture
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Garanties */}
+      <section id="garanties" className="scroll-mt-20 border-t border-slate-light bg-paper-dark/40">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+          <Reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+              Garanties
+            </p>
+            <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
+              Nos garanties et nos engagements
+            </h2>
+            <p className="mt-6 max-w-3xl text-slate">
+              Une toiture se juge sur dix ans, pas sur la semaine du chantier. Tous nos travaux
+              sont couverts par la garantie décennale souscrite auprès d&apos;AXA :
+              l&apos;attestation vous est remise avec la facture, elle reste valable dix ans et
+              se transmet à l&apos;acquéreur si vous vendez la maison. La certification RGE
+              Qualibat, elle, conditionne l&apos;accès aux aides publiques dès qu&apos;un volet
+              isolation entre dans le projet.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+            {guarantees.map((g, i) => (
+              <Reveal key={g.title} delay={i * 40} className="flex gap-4 border-t border-slate-light pt-5">
+                <span className="mt-0.5 text-blue">{guaranteeIcons[i]}</span>
+                <div>
+                  <h3 className="text-base font-semibold text-ink">{g.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">{g.text}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Entretien */}
+      <section id="entretien" className="scroll-mt-20 border-t border-slate-light bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+          <Reveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+              Entretien
+            </p>
+            <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
+              Entretenir une toiture en Anjou, saison par saison
+            </h2>
+            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2">
+              <div className="space-y-4 text-slate">
+                <p>
+                  Le climat ligérien est doux et humide : peu de gel destructeur, mais une
+                  humidité quasi permanente d&apos;octobre à mars et des vents d&apos;ouest qui
+                  poussent la pluie sous les rives. C&apos;est le contexte idéal pour la mousse,
+                  qui s&apos;installe d&apos;abord sur les pans nord et nord-ouest, retient
+                  l&apos;eau contre l&apos;ardoise et accélère son vieillissement bien plus que
+                  le soleil ne le ferait.
+                </p>
+                <p>
+                  À l&apos;automne, le seul geste vraiment rentable est le nettoyage des
+                  gouttières et des chéneaux. Une descente bouchée par les feuilles fait déborder
+                  l&apos;eau en façade, et l&apos;infiltration qui suit n&apos;apparaît parfois
+                  qu&apos;au printemps, sous forme d&apos;une auréole au plafond dont personne ne
+                  comprend l&apos;origine. Sur les maisons entourées d&apos;arbres, deux passages
+                  par an valent mieux qu&apos;un.
+                </p>
+              </div>
+              <div className="space-y-4 text-slate">
+                <p>
+                  Après l&apos;hiver, la bonne habitude est de faire le tour de la maison et de
+                  regarder le toit depuis le sol, jumelles si besoin : une ardoise glissée, une
+                  tuile déplacée, un faîtage qui a bougé se voient d&apos;en bas. C&apos;est
+                  aussi le moment de monter dans les combles avec une lampe et de chercher les
+                  traces sombres sur le bois de charpente, qui trahissent une infiltration
+                  ancienne bien avant qu&apos;elle ne traverse le plafond.
+                </p>
+                <p>
+                  Un démoussage suivi d&apos;un traitement hydrofuge se justifie tous les huit à
+                  douze ans selon l&apos;exposition, au printemps ou en début d&apos;automne, pas
+                  en plein hiver. Et une visite de contrôle tous les trois à cinq ans suffit
+                  largement sur une toiture saine : elle coûte le prix d&apos;un déplacement et
+                  évite la plupart des chantiers d&apos;urgence que nous traitons dans la
+                  panique, un dimanche de tempête.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#devis"
+              className="btn-skew mt-10 inline-block border border-ink/30 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-blue hover:text-blue"
+            >
+              Faire contrôler ma toiture
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Zone d'intervention */}
-      <section className="border-t border-slate-light bg-paper">
+      <section id="zone" className="scroll-mt-20 border-t border-slate-light bg-paper">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
@@ -670,6 +878,13 @@ export default function Home() {
             <p className="mt-6 max-w-md text-slate">
               Basés à Angers, nous intervenons dans un rayon d&apos;environ 30 km, toujours à
               moins de trente minutes de notre atelier.
+            </p>
+            <p className="mt-4 max-w-md text-slate">
+              Cette limite n&apos;est pas commerciale, elle est technique : au-delà, le temps de
+              trajet quotidien de l&apos;équipe et le coût de rotation de la benne se répercutent
+              sur le devis, et l&apos;astreinte urgence perd son sens. Sur les sept communes
+              ci-contre, nous garantissons une mise hors d&apos;eau le jour même en cas de fuite
+              active, et un rendez-vous de diagnostic sous 48 heures.
             </p>
             <a
               href="#devis"
@@ -711,6 +926,13 @@ export default function Home() {
             <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
               Ce qu&apos;on nous demande le plus souvent
             </h2>
+            <p className="mt-6 max-w-3xl text-slate">
+              Ce sont les huit questions qui reviennent dans presque tous nos premiers rendez-vous
+              à Angers. Nous y répondons ici avec des chiffres et des délais réels plutôt
+              qu&apos;avec des formules d&apos;attente, pour que vous puissiez avancer sur votre
+              projet avant même de nous appeler. Si la vôtre n&apos;y figure pas, le téléphone
+              reste le moyen le plus rapide d&apos;obtenir une réponse précise.
+            </p>
           </Reveal>
           <Reveal delay={100} className="mt-14">
             <Faq items={homeFaq} />
@@ -723,7 +945,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10">
           <Image
             src="/images/prestation-hero.jpg"
-            alt=""
+            alt="Toiture en ardoise refaite par Couverture Vasseur à Angers"
             fill
             sizes="100vw"
             className="object-cover"

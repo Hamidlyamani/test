@@ -9,6 +9,9 @@ import { faqPageSchema, roofingContractorSchema } from "@/lib/schema";
 import {
   IconCheckCircle,
   IconClock,
+  IconDroplet,
+  IconEuro,
+  IconFlame,
   IconDocument,
   IconGutter,
   IconLayers,
@@ -69,6 +72,80 @@ const urbanisme = [
   { title: "Déclaration préalable de travaux", text: "Systématique dès que l'aspect extérieur de la toiture change, à déposer en mairie d'Avrillé. Délai d'instruction standard d'un mois hors périmètre protégé.", icon: <IconDocument className="h-6 w-6" /> },
   { title: "Secteur du bourg ancien", text: "Une partie du bourg historique d'Avrillé peut être concernée par des règles d'aspect plus strictes que les lotissements environnants — nous vérifions systématiquement le PLU avant de déposer une demande.", icon: <IconScale className="h-6 w-6" /> },
   { title: "Vote en assemblée de copropriété", text: "Pour les petites copropriétés et résidences de lotissement, un devis détaillé exploitable en assemblée générale est fourni sur demande, avec coordination directe possible avec le syndic.", icon: <IconCheckCircle className="h-6 w-6" /> },
+];
+
+const secteurs = [
+  {
+    title: "Le bourg ancien",
+    text: "Maisons mitoyennes en ardoise naturelle, charpentes parfois centenaires, souches de cheminée nombreuses et rues étroites. Techniquement, ce sont les chantiers les plus proches de ce que nous faisons dans le centre d'Angers : faîtage, solins et accès sont les trois sujets, pas la surface.",
+    icon: <IconLayers className="h-6 w-6" />,
+  },
+  {
+    title: "Les lotissements des années 1970-1990",
+    text: "La plus grande partie du parc avrillais, développé le long de la route de Rennes pendant l'expansion de l'agglomération. Tuile mécanique terre cuite ou béton, charpente industrielle à deux pans, sous-toiture souvent absente. Ces toitures arrivent aujourd'hui à 40-50 ans, l'âge du premier vrai arbitrage entre entretien et réfection.",
+    icon: <IconRoof className="h-6 w-6" />,
+  },
+  {
+    title: "Les résidences et pavillons récents",
+    text: "Constructions des années 2000 et suivantes, en tuile ou en ardoise fibrociment, encore jeunes. Elles ne demandent pas de réfection mais presque personne n'y fait vérifier la zinguerie, et c'est là que naissent les infiltrations en façade dix ans plus tard.",
+    icon: <IconCheckCircle className="h-6 w-6" />,
+  },
+  {
+    title: "Les abords boisés et l'étang Saint-Nicolas",
+    text: "Sur les parcelles bordées d'arbres, au nord-ouest de la commune et vers l'étang, la mousse et les feuilles dictent le calendrier d'entretien. Deux nettoyages de gouttière par an y sont la norme, contre un ailleurs, et les pans nord se démoussent plus tôt.",
+    icon: <IconLeaf className="h-6 w-6" />,
+  },
+];
+
+const materiaux = [
+  {
+    title: "La tuile béton des années 1970-1980",
+    text: "Reconnaissable à sa teinte uniforme et à son aspect qui se ternit par plaques. Elle se désagrège en surface après 40 ans : la pluie ne glisse plus, elle s'imprègne. Durée de vie courante 40 à 50 ans — c'est exactement la tranche où se trouve une grande partie du parc avrillais.",
+  },
+  {
+    title: "La tuile mécanique en terre cuite",
+    text: "Plus durable que le béton, 60 à 80 ans, mais sensible au gel quand elle a commencé à se fissurer. Sur ces toitures, le remplacement ponctuel de tuiles cassées et la reprise des rives suffisent souvent à gagner dix ans de plus.",
+  },
+  {
+    title: "L'ardoise naturelle du bourg",
+    text: "80 à 100 ans quand la pose est saine. Sur les maisons anciennes d'Avrillé comme sur celles d'Angers, ce n'est presque jamais l'ardoise qui impose la réfection, mais le zinc des solins, la fixation et l'état du voligeage en dessous.",
+  },
+];
+
+const entretienAvrille = [
+  {
+    title: "L'automne : les gouttières",
+    text: "Sur les lotissements plantés d'arbres, les descentes se bouchent chaque année. Une gouttière qui déborde ruisselle en façade et finit par attaquer l'enduit et les fondations — un problème de toiture qui se manifeste au ras du sol.",
+    icon: <IconGutter className="h-6 w-6" />,
+  },
+  {
+    title: "Après l'hiver : le tour du toit",
+    text: "Une tuile déplacée par le vent d'ouest se voit depuis le jardin. C'est aussi le moment de monter dans les combles avec une lampe : les traces sombres sur le bois signalent une infiltration bien avant qu'elle n'atteigne le plafond.",
+    icon: <IconSearch className="h-6 w-6" />,
+  },
+  {
+    title: "Tous les 8 à 12 ans : le démoussage",
+    text: "À la brosse et au traitement, jamais au nettoyeur haute pression, qui ouvre la porosité de la tuile et fait entrer l'eau. Sur les pans nord des pavillons avrillais, c'est l'intervention qui repousse le plus efficacement une réfection complète.",
+    icon: <IconLeaf className="h-6 w-6" />,
+  },
+];
+
+const urgenceAvrille = [
+  {
+    title: "Le jour même : la mise hors d'eau",
+    text: "Bâchage ou réparation provisoire de la zone d'entrée d'eau, pour arrêter le sinistre avant qu'il ne traverse l'isolant. Avrillé étant à moins de dix minutes de l'atelier, c'est le délai que nous tenons réellement, pas un argument commercial.",
+    icon: <IconFlame className="h-6 w-6" />,
+  },
+  {
+    title: "Ensuite : trouver l'origine réelle",
+    text: "L'eau qui tombe au-dessus du lit n'entre presque jamais à la verticale. Elle chemine le long d'un chevron, parfois sur plusieurs mètres. La recherche se fait par l'extérieur et par les combles, et c'est elle qui évite de réparer au mauvais endroit.",
+    icon: <IconDroplet className="h-6 w-6" />,
+  },
+  {
+    title: "Enfin : le dossier d'assurance",
+    text: "Après une tempête ou une chute de branche, votre assurance habitation peut prendre en charge tout ou partie des travaux. Nous fournissons un devis détaillé exploitable pour la déclaration et échangeons directement avec l'expert mandaté si nécessaire.",
+    icon: <IconDocument className="h-6 w-6" />,
+  },
 ];
 
 const neighbours = [
@@ -208,7 +285,7 @@ export default function CouvreurAvrille() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[1]}`}>
             <Image
-              src="/images/cathedrale_nordouest.jpg"
+              src="/images/avrille-bourg.jpg"
               alt="Contraste entre maison de bourg ancien en ardoise et pavillon récent en tuile à Avrillé"
               fill
               sizes="(min-width: 1024px) 35vw, 90vw"
@@ -218,6 +295,39 @@ export default function CouvreurAvrille() {
               Bourg ancien et lotissement, Avrillé
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue">Secteurs</p>
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            Avrillé secteur par secteur : quatre bâtis, quatre chantiers
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate">
+            Une commune de quatorze mille habitants collée à Angers ne se traite pas comme un
+            bourg isolé. Avrillé s&apos;est construite par couches successives, et on ne monte
+            pas le même chantier selon la couche où se trouve votre maison. Voici comment nous
+            lisons la commune avant même la visite.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {secteurs.map((sec, i) => (
+              <div
+                key={sec.title}
+                className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[i]}`}
+              >
+                <span className="text-blue">{sec.icon}</span>
+                <h3 className="mt-3 font-display text-base font-semibold text-ink">{sec.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{sec.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-slate">
+            Cette lecture n&apos;est pas un exercice de style : elle détermine le matériau que
+            nous proposons, la façon dont l&apos;échafaudage se monte, le délai
+            d&apos;instruction en mairie et, au bout du compte, le montant du devis. Dites-nous
+            simplement dans quel type de maison vous êtes, nous saurons déjà de quoi nous parlons.
+          </p>
         </div>
       </section>
 
@@ -250,6 +360,39 @@ export default function CouvreurAvrille() {
 
       <section className="bg-paper-dark/40">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate">Matériaux</p>
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            Tuile béton, terre cuite ou ardoise : ce que porte votre toit
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate">
+            À Avrillé, la question n&apos;est pas « ardoise ou tuile » comme dans le centre
+            d&apos;Angers : les trois matériaux cohabitent, parfois dans la même rue. Savoir
+            lequel vous avez sur la tête change la durée de vie attendue, le coût au mètre carré
+            et la nature de l&apos;entretien.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {materiaux.map((m, i) => (
+              <div
+                key={m.title}
+                className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[i]}`}
+              >
+                <h3 className="font-display text-base font-semibold text-ink">{m.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{m.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-slate">
+            Nous ne poussons pas au changement de matériau quand le bâti ne le justifie pas.
+            Remplacer une tuile béton par de l&apos;ardoise sur un pavillon de lotissement
+            double la facture, alourdit la charpente et n&apos;apporte rien à la maison. À
+            l&apos;inverse, sur une maison de bourg en ardoise, poser de la tuile serait une
+            faute — et souvent un refus en mairie.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-paper-dark/40">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate">Accès chantier</p>
           <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
             L&apos;accès aux toitures à Avrillé
@@ -271,13 +414,14 @@ export default function CouvreurAvrille() {
         </div>
       </section>
 
-      <section className="bg-paper back" style={{
-            backgroundImage: "url('/images/hero-accueil.jpg')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "auto",
-            backgroundColor: "ink"
-          }}>
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20 z-99 relative ">
+      <section
+        className="relative bg-ink"
+        style={{
+          backgroundImage: "url('/images/hero-accueil.jpg')",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:py-20">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue">Tarif</p>
           <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
             Pourquoi le prix varie selon le quartier d&apos;Avrillé
@@ -315,6 +459,54 @@ export default function CouvreurAvrille() {
         </div>
       </section>
 
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue">Budget</p>
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            Les budgets que nous constatons à Avrillé
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate">
+            Refuser de parler d&apos;argent avant la visite fait perdre du temps à tout le monde.
+            Voici les fourchettes que nous observons réellement sur la commune — elles ne
+            remplacent pas un devis, elles vous disent si votre projet tient dans votre budget.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[0]}`}>
+              <IconEuro className="h-6 w-6 text-blue" />
+              <h3 className="mt-3 font-display text-base font-semibold text-ink">
+                Un pavillon de lotissement, 90 à 120 m² de toiture
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Réfection complète en tuile mécanique avec écran de sous-toiture neuf : le plus
+                souvent 9 000 à 16 000 euros, échafaudage et évacuation compris. Deux pans, pas
+                de point singulier majeur, accès par le jardin — c&apos;est le chantier le plus
+                simple à chiffrer sur la commune. Un démoussage avec traitement hydrofuge sur la
+                même surface se situe entre 900 et 1 800 euros.
+              </p>
+            </div>
+            <div className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[1]}`}>
+              <IconEuro className="h-6 w-6 text-blue" />
+              <h3 className="mt-3 font-display text-base font-semibold text-ink">
+                Une maison du bourg en ardoise
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Comptez plutôt 12 000 à 24 000 euros pour une réfection complète en ardoise
+                naturelle : la matière coûte plus cher, les points singuliers sont plus nombreux
+                et l&apos;échafaudage demande parfois une autorisation de voirie. Une reprise
+                ciblée — quelques ardoises, un solin, un faîtage — reste entre 800 et 3 000
+                euros selon l&apos;accès.
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 max-w-3xl text-slate">
+            Dans les deux cas, le déplacement, le relevé et le chiffrage sont gratuits, le devis
+            est détaillé poste par poste et reste valable trois mois. Si un volet isolation de
+            combles entre dans le projet, notre certification RGE Qualibat ouvre l&apos;accès à
+            MaPrimeRénov&apos; et à l&apos;éco-prêt à taux zéro selon vos revenus.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-paper-dark/40">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate">Diagnostic</p>
@@ -333,6 +525,39 @@ export default function CouvreurAvrille() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate">Entretien</p>
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            L&apos;entretien d&apos;une toiture avrillaise, année après année
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate">
+            La majorité des réfections que nous chiffrons à Avrillé auraient pu être repoussées
+            de dix ans avec trois gestes d&apos;entretien. Ce n&apos;est pas une formule : sur un
+            pavillon des années 1980, la différence entre une toiture à refaire et une toiture à
+            entretenir se joue presque toujours sur la sous-toiture, et donc sur ce qui a été
+            laissé s&apos;infiltrer pendant des années.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {entretienAvrille.map((e, i) => (
+              <div
+                key={e.title}
+                className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[i]}`}
+              >
+                <span className="text-blue">{e.icon}</span>
+                <h3 className="mt-3 font-display text-base font-semibold text-ink">{e.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{e.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-slate">
+            Une visite de contrôle tous les trois à cinq ans suffit sur une toiture saine. Elle
+            coûte le prix d&apos;un déplacement et c&apos;est, de loin, le meilleur rapport entre
+            ce que vous dépensez et ce que vous évitez.
+          </p>
         </div>
       </section>
 
@@ -362,6 +587,42 @@ export default function CouvreurAvrille() {
           >
             Planifier ma visite de relevé
           </a>
+        </div>
+      </section>
+
+      <section className="bg-paper-dark/40">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue">Urgence</p>
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            Fuite à Avrillé : ce que nous faisons le jour même
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate">
+            Une fuite active ne se traite pas comme un chantier planifié. L&apos;astreinte
+            téléphonique répond 7 jours sur 7 au {business.phone}, et la proximité change tout :
+            depuis notre atelier angevin, une intervention à Avrillé se déclenche en moins de dix
+            minutes de route.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {urgenceAvrille.map((u, i) => (
+              <div
+                key={u.title}
+                className={`border border-slate-light bg-white p-6 shadow-sm transition-transform duration-300 hover:rotate-0 ${cardTilts[i]}`}
+              >
+                <span className="text-blue">{u.icon}</span>
+                <h3 className="mt-3 font-display text-base font-semibold text-ink">{u.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{u.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href={business.phoneHref}
+              className="btn-skew inline-block bg-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark"
+            >
+              Urgence fuite — appeler le {business.phone}
+            </a>
+            <span className="text-sm text-slate">Astreinte 7 j / 7, y compris week-ends et jours fériés.</span>
+          </div>
         </div>
       </section>
 

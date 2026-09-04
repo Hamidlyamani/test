@@ -7,7 +7,7 @@ export default function HeroReveal() {
     <section id="hero" className="relative bg-paper">
       <div className="absolute inset-x-0 -top-[61px] bottom-0">
         <Image
-          src="/images/hero_bg.webp"
+          src="/images/chateau-angers-vue-aerienne.webp"
           alt="Vue aérienne du château d'Angers et de la ville"
           fill
           priority
@@ -33,7 +33,7 @@ function HeroCopy() {
         Angers &amp; pays angevin
       </p>
       <h1 className="font-display-italic text-4xl leading-[1.05] text-ink sm:text-5xl xl:text-6xl">
-        Couvreur à Angers : l&apos;ardoise <br/> comme matière première d&apos;un savoir-faire
+        Couvreur à Angers&nbsp;: l&apos;ardoise <br className="hidden sm:inline" />comme matière première d&apos;un savoir-faire
       </h1>
       <p className="mt-6 max-w-md text-base text-slate">
         Douze ans à couvrir les toits angevins en ardoise naturelle. Julien Vasseur et son

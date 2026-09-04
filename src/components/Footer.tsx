@@ -17,7 +17,7 @@ export default function Footer() {
                     href={
                       s.slug === "refection-toiture" || s.slug === "couverture-ardoise"
                         ? "/refection-toiture-ardoise-angers"
-                        : "/"
+                        : `/#${s.slug}`
                     }
                     className="transition-colors hover:text-white"
                   >
@@ -40,7 +40,9 @@ export default function Footer() {
                       {a.name}
                     </Link>
                   ) : (
-                    <span>{a.name}</span>
+                    <Link href="/#zone" className="transition-colors hover:text-white">
+                      {a.name}
+                    </Link>
                   )}
                 </li>
               ))}
