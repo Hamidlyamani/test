@@ -125,6 +125,29 @@ const guarantees = [
   { title: "Diagnostic gratuit", text: "Aucun frais de visite, que le chantier se fasse ou non." },
 ];
 
+const epoques = [
+  {
+    era: "Avant 1900",
+    material: "Ardoise naturelle",
+    text: "Maisons de ville mitoyennes du centre ancien : fortes pentes, lucarnes, souches de cheminée multiples. Le chantier se joue sur les points singuliers et l'échafaudage sur voirie, pas sur la surface.",
+  },
+  {
+    era: "1900-1960",
+    material: "Ardoise, combles aménagés",
+    text: "Maisons bourgeoises des faubourgs. L'enjeu n'est plus la couverture mais l'écran de sous-toiture, absent à l'origine, et l'isolation ajoutée plus tard sans pare-vapeur.",
+  },
+  {
+    era: "1960-1990",
+    material: "Tuile mécanique",
+    text: "Les quartiers pavillonnaires d'Angers, Avrillé et Beaucouzé. Ces toitures atteignent 40 à 50 ans : la tuile béton se désagrège en surface, les fixations lâchent côté ouest.",
+  },
+  {
+    era: "Après 2000",
+    material: "Tuile ou fibrociment",
+    text: "Encore jeunes, mais jamais contrôlées. C'est l'âge où un démoussage et une reprise de zinguerie coûtent quelques centaines d'euros au lieu de quelques milliers.",
+  },
+];
+
 const whyUs = [
   {
     title: "Rapidité d'intervention",
@@ -375,7 +398,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Le bâti angevin */}
+      {/* Le bâti angevin — frise par époque */}
       <section id="bati" className="scroll-mt-20 border-t border-slate-light bg-paper">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
           <Reveal>
@@ -383,56 +406,26 @@ export default function Home() {
               Le bâti local
             </p>
             <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
-              Un toit par époque, du centre historique à la périphérie
+              Un toit par époque
             </h2>
-            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2">
-              <div className="space-y-4 text-slate">
-                <p>
-                  Angers n&apos;a pas un bâti, elle en a quatre, et chacun pose des questions
-                  différentes une fois qu&apos;on est sur le toit. Dans le centre ancien — la
-                  Doutre, le quartier de la Cité, les rues qui descendent vers la Maine — les
-                  maisons de ville sont mitoyennes, hautes, à forte pente, couvertes en ardoise
-                  naturelle avec des lucarnes et des souches de cheminée nombreuses. Ce sont les
-                  toitures les plus techniques : chaque point singulier demande un traitement à
-                  part, l&apos;échafaudage se monte souvent sur voirie, et la teinte de
-                  l&apos;ardoise se discute avec les Bâtiments de France.
-                </p>
-                <p>
-                  La couronne des faubourgs — Saint-Serge, Madeleine, Justices — aligne des
-                  maisons bourgeoises de la fin du XIX<sup>e</sup> et du début du XX<sup>e</sup>,
-                  ardoise également, mais avec des combles souvent aménagés depuis. Sur ces
-                  maisons, l&apos;enjeu n&apos;est pas seulement la couverture : c&apos;est
-                  l&apos;écran de sous-toiture, presque toujours absent à l&apos;origine, et
-                  l&apos;isolation posée dans les années 1980 sans pare-vapeur, qui finit par
-                  gorger la charpente d&apos;humidité.
-                </p>
-              </div>
-              <div className="space-y-4 text-slate">
-                <p>
-                  Les quartiers pavillonnaires construits entre 1960 et 1990, à Angers comme à
-                  Avrillé, Beaucouzé ou Écouflant, ont massivement adopté la tuile mécanique en
-                  terre cuite ou en béton, sur charpente industrielle. Ces toitures arrivent
-                  aujourd&apos;hui au bout de leur premier cycle : la tuile béton se
-                  désagrège en surface après quarante ans, les fixations lâchent sur les rives
-                  exposées à l&apos;ouest, et la sous-toiture d&apos;origine, quand il y en a une,
-                  est devenue poreuse.
-                </p>
-                <p>
-                  Enfin, les constructions des années 2000 et suivantes, en tuile ou en ardoise
-                  fibrociment, sont encore jeunes. Elles ne demandent pas de réfection mais
-                  souffrent d&apos;un défaut d&apos;entretien : personne ne pense à faire
-                  vérifier une toiture de quinze ans, et c&apos;est pourtant l&apos;âge où un
-                  démoussage et une reprise de zinguerie coûtent quelques centaines
-                  d&apos;euros au lieu de quelques milliers dix ans plus tard.
-                </p>
-                <p>
-                  Savoir à quelle famille appartient votre maison change tout le reste : le
-                  matériau qu&apos;on vous proposera, le temps de chantier, les autorisations à
-                  déposer et le prix. C&apos;est la première chose que nous regardons en arrivant.
-                </p>
-              </div>
-            </div>
+            <p className="mt-6 max-w-2xl text-slate">
+              Angers n&apos;a pas un bâti, elle en a quatre. On ne monte pas le même chantier sur
+              une maison de la Doutre et sur un pavillon de Beaucouzé — et c&apos;est la première
+              chose que nous regardons en arrivant.
+            </p>
           </Reveal>
+          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {epoques.map((e, i) => (
+              <Reveal key={e.era} delay={i * 60} className="relative border-t-2 border-ink/15 pt-7">
+                <span className="absolute -top-[7px] left-0 block h-3 w-3 bg-blue" />
+                <p className="font-display-italic text-3xl leading-none text-ink">{e.era}</p>
+                <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue">
+                  {e.material}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-slate">{e.text}</p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -587,6 +580,14 @@ export default function Home() {
             <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
               Nos derniers chantiers en Anjou
             </h2>
+            <p className="mt-6 max-w-2xl text-slate">
+              Quatre chantiers récents, choisis parce qu&apos;ils couvrent quatre situations
+              différentes plutôt que quatre belles photos : une réfection lourde en secteur
+              protégé, une fuite que personne n&apos;arrivait à localiser, une zinguerie qui
+              ruinait une façade, et un entretien préventif qui repousse une réfection de
+              plusieurs années. Les surfaces, les délais et les matériaux annoncés sont ceux du
+              devis signé.
+            </p>
           </Reveal>
           <div className="mt-14 grid grid-cols-1 ">
             {realisations.map((r, i) => (
@@ -698,6 +699,13 @@ export default function Home() {
             <h2 className="font-display-italic text-3xl leading-tight text-ink sm:text-4xl">
               Comment se déroule un chantier
             </h2>
+            <p className="mt-6 max-w-2xl text-slate">
+              La crainte la plus fréquente n&apos;est pas le prix du devis, c&apos;est le devis
+              qui change en cours de route. Voici donc exactement comment se passe une
+              intervention, du premier appel jusqu&apos;à la remise de la décennale. Chaque étape
+              a un interlocuteur unique — le même du début à la fin — et aucun poste n&apos;est
+              ajouté sans un avenant que vous signez.
+            </p>
           </Reveal>
           <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {process.map((step, i) => (
@@ -804,6 +812,17 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <Reveal>
+            <p className="mt-10 max-w-3xl text-sm text-slate">
+              Un point que peu de gens connaissent : la décennale ne couvre pas l&apos;usure
+              normale, elle couvre les désordres qui compromettent l&apos;étanchéité ou la
+              solidité de l&apos;ouvrage. Concrètement, une infiltration qui apparaît trois ans
+              après nos travaux est prise en charge ; une ardoise arrachée par une tempête relève
+              de votre assurance habitation. Nous vous expliquons la différence à la réception,
+              parce que c&apos;est au moment du sinistre qu&apos;elle compte, et parce
+              qu&apos;une attestation qu&apos;on ne comprend pas ne protège personne.
+            </p>
+          </Reveal>
         </div>
       </section>
 
