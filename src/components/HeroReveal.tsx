@@ -47,7 +47,7 @@ function HeroCopy() {
       <p className="mb-5 inline-block border border-ink/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate">
         Angers &amp; pays angevin
       </p>
-      <h1 className="font-display-italic text-4xl leading-[1.05] text-ink sm:text-5xl xl:text-6xl">
+      <h1 className="font-display-italic text-3xl leading-[1.1] text-ink sm:text-4xl xl:text-5xl">
         Couvreur à Angers&nbsp;: l&apos;ardoise <br className="hidden sm:inline" />comme matière première d&apos;un savoir-faire
       </h1>
       <p className="mt-6 max-w-md text-base text-slate">
