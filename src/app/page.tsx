@@ -84,15 +84,19 @@ type Realisation = {
 
 const realisations: Realisation[] = [
   {
-    image: "/images/toiture-ardoise-velux-echafaudage-angers.jpg",
-    alt: "Toiture en ardoise refaite avec fenêtre de toit, échafaudage encore en place",
+    image: "/images/refection-ardoise-maison-de-maitre-avant.jpg",
+    alt: "Avant travaux : toiture en ardoise envahie par la mousse, zinc de lucarne rouillé sur une maison de maître angevine",
+    imageAfter: "/images/refection-ardoise-maison-de-maitre-apres.jpg",
+    altAfter: "Après travaux : la même toiture en ardoise refaite, zinguerie neuve et couvreurs en finition sur le versant",
     title: "Réfection complète",
     place: "Quartier de la Doutre, Angers",
-    text: "Toiture ardoise de 95 m² sur une maison à pans de bois du XVIIe, charpente partiellement reprise, ardoises d'origine remplacées à l'identique après validation des Bâtiments de France.",
+    text: "Toiture ardoise de 95 m² sur une maison de maître du XIXe, lucarnes et souche en tuffeau reprises, zinc entièrement remplacé. Ardoises posées à l'identique après validation des Bâtiments de France.",
   },
   {
-    image: "/images/aureole-infiltration-plafond-combles.jpg",
-    alt: "Auréole brune d'infiltration au plafond sous les combles, trace laissée par la fuite",
+    image: "/images/infiltration-plafond-combles-avant.jpg",
+    alt: "Avant intervention : large auréole brune d'infiltration au plafond sous les combles",
+    imageAfter: "/images/plafond-repare-apres-recherche-fuite.jpg",
+    altAfter: "Après intervention : le même plafond assaini et repeint, l'infiltration est stoppée",
     title: "Recherche de fuite",
     place: "Rue Saint-Aubin, Angers",
     text: "Fuite récurrente signalée depuis six mois par le syndic, jamais localisée. Le problème venait d'un solin de cheminée descellé, invisible depuis l'intérieur des combles.",
@@ -104,14 +108,16 @@ const realisations: Realisation[] = [
     altAfter: "Après travaux : gouttière et descente en cuivre neuves posées en rive de toiture",
     title: "Zinguerie complète",
     place: "Trélazé",
-    text: "Remplacement de 40 mètres linéaires de gouttières en zinc, chéneaux encaissés refaits pour stopper les infiltrations en façade constatées chaque automne.",
+    text: "Remplacement de 40 mètres linéaires de gouttières, chéneaux encaissés refaits pour stopper les infiltrations en façade constatées chaque automne.",
   },
   {
-    image: "/images/toiture-mousse-pavillon-avant-demoussage.jpg",
-    alt: "Toiture de pavillon envahie par la mousse sur le pan nord, avant démoussage",
+    image: "/images/toiture-tuile-mousse-avant-demoussage.jpg",
+    alt: "Avant traitement : toiture en tuile mécanique couverte de mousse sur le pan nord d'un pavillon",
+    imageAfter: "/images/demoussage-toiture-tuile-en-cours.jpg",
+    altAfter: "Démoussage en cours sur la même toiture, lavage à pression maîtrisée depuis une échelle de couvreur",
     title: "Démoussage et hydrofuge",
     place: "Beaucouzé",
-    text: "Toiture ardoise très exposée au nord, mousse installée en profondeur sur 130 m². Gain estimé de cinq à sept ans avant le prochain entretien lourd.",
+    text: "Pavillon des années 1980 en tuile mécanique, pan nord très exposé, mousse installée en profondeur sur 130 m². Lavage à pression maîtrisée puis hydrofuge : cinq à sept ans gagnés avant le prochain entretien lourd.",
   },
 ];
 

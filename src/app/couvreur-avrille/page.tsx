@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "À Avrillé, entre pavillons des années 1970-1990 et maisons de bourg ancien, chaque toiture pose des questions différentes. Notre intervention adaptée au bâti local.",
     url: "/couvreur-avrille",
-    images: [{ url: "/images/maison-ardoise-lucarnes-souche-angers.jpg", width: 1365, height: 768 }],
+    images: [{ url: "/images/toiture-ardoise-velux-echafaudage-angers.jpg", width: 900, height: 1200 }],
   },
 };
 
@@ -125,7 +125,7 @@ const entretienAvrille = [
   },
   {
     title: "Tous les 8 à 12 ans : le démoussage",
-    text: "À la brosse et au traitement, jamais au nettoyeur haute pression, qui ouvre la porosité de la tuile et fait entrer l'eau. Sur les pans nord des pavillons avrillais, c'est l'intervention qui repousse le plus efficacement une réfection complète.",
+    text: "Sur l'ardoise, à la brosse et au produit : jamais de jet violent, qui ouvre la porosité de la pierre. Sur la tuile mécanique des pavillons, un lavage à pression maîtrisée suivi d'un hydrofuge reste la méthode la plus efficace pour repousser une réfection complète.",
     icon: <IconLeaf className="h-6 w-6" />,
   },
 ];
@@ -208,8 +208,8 @@ export default function CouvreurAvrille() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/maison-ardoise-lucarnes-souche-angers.jpg"
-              alt="Maison de bourg couverte en ardoise, lucarnes et souche de cheminée en pierre de tuffeau"
+              src="/images/toiture-ardoise-velux-echafaudage-angers.jpg"
+              alt="Toiture en ardoise refaite sur un pavillon, fenêtre de toit et échafaudage encore en place"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -285,7 +285,7 @@ export default function CouvreurAvrille() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[1]}`}>
             <Image
-              src="/images/toiture-ardoise-ancienne-anjou.jpg"
+              src="/images/toits-ardoise-centre-historique-angers.jpg"
               alt="Toiture ancienne en ardoise irrégulière, typique du bâti de bourg"
               fill
               sizes="(min-width: 1024px) 35vw, 90vw"
@@ -417,7 +417,7 @@ export default function CouvreurAvrille() {
       <section
         className="relative bg-ink"
         style={{
-          backgroundImage: "url('/images/toits-ardoise-centre-historique-angers.jpg')",
+          backgroundImage: "url('/images/toiture-ardoise-ancienne-anjou.jpg')",
           backgroundRepeat: "repeat",
         }}
       >

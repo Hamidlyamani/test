@@ -335,7 +335,7 @@ export default function RefectionToitureArdoiseAngers() {
             </ul>
             <div className={`relative aspect-[3/5] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[1]}`}>
               <Image
-                src="/images/aureole-infiltration-plafond-combles.jpg"
+                src="/images/toiture-ardoise-velux-echafaudage-angers.jpg"
                 alt="Auréole brune d'infiltration au plafond sous les combles, l'un des premiers signes d'alerte"
                 fill
                 sizes="(min-width: 1024px) 35vw, 90vw"
@@ -360,7 +360,7 @@ export default function RefectionToitureArdoiseAngers() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 py-16 sm:py-20 lg:grid-cols-[0.8fr_1fr]">
           <div className={`relative aspect-[4/4] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/pose-ardoise-liteaunage-angers.jpg"
+              src="/images/og-couverture-vasseur-angers.jpg"
               alt="Ardoises posées rang par rang sur un liteaunage neuf, pureau et recouvrement calculés selon la pente"
               fill
               sizes="(min-width: 1024px) 35vw, 90vw"
@@ -664,9 +664,10 @@ export default function RefectionToitureArdoiseAngers() {
             <div className="space-y-4 text-slate">
               <p>
                 Deux erreurs abrègent la vie d&apos;une toiture ardoise plus sûrement que le
-                temps. La première est le nettoyage haute pression : la lance décolle le film de
-                surface, ouvre la porosité de l&apos;ardoise et fait entrer l&apos;eau — nous
-                démoussons à la brosse et au produit, jamais au karcher. La seconde est de
+                temps. La première est le jet violent : sur de l&apos;ardoise, la lance décolle
+                le film de surface, ouvre la porosité de la pierre et fait entrer l&apos;eau —
+                nous démoussons l&apos;ardoise à la brosse et au produit, et réservons le lavage
+                à pression maîtrisée aux couvertures en tuile. La seconde est de
                 marcher directement sur la couverture : une ardoise supporte mal une charge
                 ponctuelle, et une intervention d&apos;antenniste ou de ramoneur mal préparée
                 fissure plus de toitures que les tempêtes.
