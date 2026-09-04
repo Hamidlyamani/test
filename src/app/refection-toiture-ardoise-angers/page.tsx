@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Signes qui doivent alerter, déroulé du chantier, démarches ABF et copropriété : tout ce qu'il faut savoir avant de refaire sa toiture en ardoise à Angers.",
     url: "/refection-toiture-ardoise-angers",
-    images: [{ url: "/images/prestation-hero.jpg", width: 1600, height: 1067 }],
+    images: [{ url: "/images/refection-toiture-ardoise-chantier-angers.webp", width: 800, height: 500 }],
   },
 };
 
@@ -259,8 +259,8 @@ export default function RefectionToitureArdoiseAngers() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/prestation-hero.jpg"
-              alt="Couvreurs posant des tuiles sur une toiture en cours de réfection, échafaudage en place"
+              src="/images/refection-toiture-ardoise-chantier-angers.webp"
+              alt="Réfection en cours : couvreurs sur le liteaunage mis à nu, ardoises déjà posées en partie basse"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -335,8 +335,8 @@ export default function RefectionToitureArdoiseAngers() {
             </ul>
             <div className={`relative aspect-[3/5] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[1]}`}>
               <Image
-                src="/images/ardoises-fissurees-faitage-descelle-angers.jpg"
-                alt="Ardoises fissurées et faîtage descellé sur une toiture ancienne à Angers"
+                src="/images/aureole-infiltration-plafond-combles.jpg"
+                alt="Auréole brune d'infiltration au plafond sous les combles, l'un des premiers signes d'alerte"
                 fill
                 sizes="(min-width: 1024px) 35vw, 90vw"
                 className="object-cover"
@@ -360,8 +360,8 @@ export default function RefectionToitureArdoiseAngers() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 py-16 sm:py-20 lg:grid-cols-[0.8fr_1fr]">
           <div className={`relative aspect-[4/4] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/pose-ardoise.jpg"
-              alt="Couvreur harnaché appliquant un produit d'étanchéité lors d'une reprise de toiture"
+              src="/images/pose-ardoise-liteaunage-angers.jpg"
+              alt="Ardoises posées rang par rang sur un liteaunage neuf, pureau et recouvrement calculés selon la pente"
               fill
               sizes="(min-width: 1024px) 35vw, 90vw"
               className="object-cover"
@@ -602,7 +602,7 @@ export default function RefectionToitureArdoiseAngers() {
       <section
         className="relative bg-ink"
         style={{
-          backgroundImage: "url('/images/fond-ardoise-texture.jpg')",
+          backgroundImage: "url('/images/rue-ancienne-pierre-centre-ville.jpg')",
           backgroundRepeat: "repeat",
         }}
       >

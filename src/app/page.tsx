@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import BeforeAfter from "@/components/BeforeAfter";
 import DevisForm from "@/components/DevisForm";
 import Faq from "@/components/Faq";
 import HeroReveal from "@/components/HeroReveal";
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Julien Vasseur et son équipe refont, réparent et entretiennent les toitures à Angers et dans un rayon de 30 km. Ardoise naturelle, décennale AXA, devis gratuit sous 48 h.",
     url: "/",
-    images: [{ url: "/images/og-couverture-vasseur-angers.png", width: 1600, height: 1067 }],
+    images: [{ url: "/images/og-couverture-vasseur-angers.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -71,31 +72,43 @@ function GoogleMark({ className }: { className?: string }) {
   );
 }
 
-const realisations = [
+type Realisation = {
+  image: string;
+  alt: string;
+  imageAfter?: string;
+  altAfter?: string;
+  title: string;
+  place: string;
+  text: string;
+};
+
+const realisations: Realisation[] = [
   {
-    image: "/images/restauration-toiture-ardoise-01.webp",
-    alt: "Toiture en ardoise réfectionnée sur une maison à pans de bois du quartier de la Doutre à Angers",
+    image: "/images/toiture-ardoise-velux-echafaudage-angers.jpg",
+    alt: "Toiture en ardoise refaite avec fenêtre de toit, échafaudage encore en place",
     title: "Réfection complète",
     place: "Quartier de la Doutre, Angers",
     text: "Toiture ardoise de 95 m² sur une maison à pans de bois du XVIIe, charpente partiellement reprise, ardoises d'origine remplacées à l'identique après validation des Bâtiments de France.",
   },
   {
-    image: "/images/recherche-fuite-solin-cheminee-angers.jpg",
-    alt: "Compagnon couvreur appliquant un produit d'étanchéité sur un point sensible de la toiture",
+    image: "/images/aureole-infiltration-plafond-combles.jpg",
+    alt: "Auréole brune d'infiltration au plafond sous les combles, trace laissée par la fuite",
     title: "Recherche de fuite",
     place: "Rue Saint-Aubin, Angers",
     text: "Fuite récurrente signalée depuis six mois par le syndic, jamais localisée. Le problème venait d'un solin de cheminée descellé, invisible depuis l'intérieur des combles.",
   },
   {
-    image: "/images/zinguerie-gouttiere-zinc-trelaze.jpg",
-    alt: "Couvreurs posant des tuiles sur une toiture en cours de rénovation, échafaudage en place",
+    image: "/images/gouttiere-rouillee-avant-reprise.jpg",
+    alt: "Avant travaux : gouttière rouillée et envahie par la végétation le long de la rive",
+    imageAfter: "/images/gouttiere-cuivre-apres-reprise.webp",
+    altAfter: "Après travaux : gouttière et descente en cuivre neuves posées en rive de toiture",
     title: "Zinguerie complète",
     place: "Trélazé",
     text: "Remplacement de 40 mètres linéaires de gouttières en zinc, chéneaux encaissés refaits pour stopper les infiltrations en façade constatées chaque automne.",
   },
   {
-    image: "/images/demoussage-toiture-ardoise-beaucouze.jpg",
-    alt: "Toiture en ardoise après démoussage et traitement hydrofuge à Beaucouzé",
+    image: "/images/toiture-mousse-pavillon-avant-demoussage.jpg",
+    alt: "Toiture de pavillon envahie par la mousse sur le pan nord, avant démoussage",
     title: "Démoussage et hydrofuge",
     place: "Beaucouzé",
     text: "Toiture ardoise très exposée au nord, mousse installée en profondeur sur 130 m². Gain estimé de cinq à sept ans avant le prochain entretien lourd.",
@@ -334,8 +347,8 @@ export default function Home() {
             <div className="relative aspect-[4/3] w-full">
               <div className="absolute inset-0 -rotate-1 overflow-hidden border-[6px] border-white shadow-xl">
                 <Image
-                  src="/images/materiau-ardoise.webp"
-                  alt="Compagnons couvreurs posant des ardoises sur une charpente neuve"
+                  src="/images/restauration-toiture-ardoise-01.webp"
+                  alt="Réfection d'une toiture en ardoise sur une maison de ville, lucarnes cintrées et zinguerie reprises"
                   fill
                   sizes="(min-width: 1024px) 45vw, 90vw"
                   className="object-cover"
@@ -433,8 +446,8 @@ export default function Home() {
       <section className="relative overflow-hidden border-t border-slate-light bg-ink">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-accueil.jpg"
-            alt="Couvreur en intervention sur une charpente à Angers"
+            src="/images/toiture-ardoise-ancienne-anjou.jpg"
+            alt="Toiture ancienne couverte d'ardoises irrégulières, bâti traditionnel de l'Anjou"
             fill
             sizes="100vw"
             className="object-cover"
@@ -600,13 +613,22 @@ export default function Home() {
                   <div
                     className={`relative aspect-[4/3] w-full overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[i % 2]}`}
                   >
-                    <Image
-                      src={r.image}
-                      alt={r.alt}
-                      fill
-                      sizes="(min-width: 1024px) 48vw, 90vw"
-                      className="object-cover"
-                    />
+                    {r.imageAfter && r.altAfter ? (
+                      <BeforeAfter
+                        before={r.image}
+                        beforeAlt={r.alt}
+                        after={r.imageAfter}
+                        afterAlt={r.altAfter}
+                      />
+                    ) : (
+                      <Image
+                        src={r.image}
+                        alt={r.alt}
+                        fill
+                        sizes="(min-width: 1024px) 48vw, 90vw"
+                        className="object-cover"
+                      />
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-blue">
@@ -641,8 +663,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal className={`relative aspect-[4/3] w-full overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/artisan-julien.jpg"
-              alt="Julien Vasseur, artisan couvreur, en intervention sur une toiture"
+              src="/images/couvreur-depose-ardoise-angers.jpg"
+              alt="Couvreur agenouillé sur une toiture en ardoise, dépose en cours et liteaunage apparent"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
@@ -963,8 +985,8 @@ export default function Home() {
       <section className="relative border-t border-slate-light bg-paper">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/images/prestation-hero.jpg"
-            alt="Toiture en ardoise refaite par Couverture Vasseur à Angers"
+            src="/images/chateau-angers-vue-aerienne.webp"
+            alt="Vue aérienne d'Angers et de ses toitures en ardoise"
             fill
             sizes="100vw"
             className="object-cover"

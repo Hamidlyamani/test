@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "À Avrillé, entre pavillons des années 1970-1990 et maisons de bourg ancien, chaque toiture pose des questions différentes. Notre intervention adaptée au bâti local.",
     url: "/couvreur-avrille",
-    images: [{ url: "/images/avrille-hero.jpg", width: 1600, height: 1200 }],
+    images: [{ url: "/images/maison-ardoise-lucarnes-souche-angers.jpg", width: 1365, height: 768 }],
   },
 };
 
@@ -208,8 +208,8 @@ export default function CouvreurAvrille() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[0]}`}>
             <Image
-              src="/images/avrille-hero.jpg"
-              alt="Toiture de pavillon rénovée à Avrillé, tuile mécanique remplacée"
+              src="/images/maison-ardoise-lucarnes-souche-angers.jpg"
+              alt="Maison de bourg couverte en ardoise, lucarnes et souche de cheminée en pierre de tuffeau"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -285,8 +285,8 @@ export default function CouvreurAvrille() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden border-[6px] border-white shadow-xl ${imageTilts[1]}`}>
             <Image
-              src="/images/avrille-bourg.jpg"
-              alt="Contraste entre maison de bourg ancien en ardoise et pavillon récent en tuile à Avrillé"
+              src="/images/toiture-ardoise-ancienne-anjou.jpg"
+              alt="Toiture ancienne en ardoise irrégulière, typique du bâti de bourg"
               fill
               sizes="(min-width: 1024px) 35vw, 90vw"
               className="object-cover"
@@ -417,7 +417,7 @@ export default function CouvreurAvrille() {
       <section
         className="relative bg-ink"
         style={{
-          backgroundImage: "url('/images/hero-accueil.jpg')",
+          backgroundImage: "url('/images/toits-ardoise-centre-historique-angers.jpg')",
           backgroundRepeat: "repeat",
         }}
       >

@@ -10,19 +10,14 @@ const FADE = 1100; // duree du fondu, en ms
 
 const slides = [
   {
-    src: "/images/restauration-toiture-ardoise-01.webp",
-    alt: "Réfection d'une toiture en ardoise naturelle sur une maison de ville angevine, lucarnes et zinguerie reprises",
-    caption: "Réfection ardoise — maison de ville, Angers",
-  },
-  {
-    src: "/images/materiau-ardoise.webp",
-    alt: "Compagnons couvreurs posant des ardoises sur un liteaunage neuf",
+    src: "/images/pose-ardoise-liteaunage-angers.jpg",
+    alt: "Ardoises posées rang par rang sur un liteaunage neuf, recouvrement en cours",
     caption: "Pose d'ardoise sur liteaunage neuf",
   },
   {
-    src: "/images/toits-ardoise-centre-historique-angers.jpg",
-    alt: "Les toits en ardoise du centre historique d'Angers vus depuis les hauteurs",
-    caption: "Les toits d'ardoise du centre d'Angers",
+    src: "/images/ardoise-ecailles-lucarne-toiture.jpg",
+    alt: "Toiture couverte d'ardoises posées en écailles autour d'une petite lucarne",
+    caption: "Ardoise posée en écailles",
   },
 ];
 

@@ -22,7 +22,7 @@ export function roofingContractorSchema(opts: { url: string; areaServed?: string
     "@type": "RoofingContractor",
     name: business.name,
     alternateName: `${business.founder} Couvreur`,
-    image: `${business.siteUrl}/images/artisan-julien.jpg`,
+    image: `${business.siteUrl}/images/og-couverture-vasseur-angers.jpg`,
     url: opts.url,
     telephone: business.phoneHref.replace("tel:", ""),
     email: business.email,
