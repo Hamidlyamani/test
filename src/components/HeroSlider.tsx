@@ -19,6 +19,11 @@ const slides = [
     alt: "Toiture couverte d'ardoises posées en écailles autour d'une petite lucarne",
     caption: "Ardoise posée en écailles",
   },
+  {
+    src: "/images/hero3.jpg",
+    alt: "Compagnon couvreur en train de démoussser une toiture ardoise au nettoyeur haute pression",
+    caption: "Démoussage toiture ardoise, nettoyage haute pression",
+  },
 ];
 
 export default function HeroSlider() {
