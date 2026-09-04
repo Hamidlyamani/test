@@ -253,8 +253,21 @@ export default function Home() {
 
       <HeroReveal />
 
+      {/* Separator: black gradient straddling the hero → devis seam, transparent at both ends */}
+      <div className="relative z-[25] h-0">
+        <div
+          className="pointer-events-none absolute inset-x-0"
+          style={{
+            top: "-100px",
+            height: "200px",
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 50%, transparent 100%)",
+          }}
+        />
+      </div>
+
       {/* Devis */}
-      <section id="devis" className="relative scroll-mt-20 border-t border-slate-light">
+      <section id="devis" className="relative scroll-mt-20">
         {/* tiled background */}
         <div
           className="absolute inset-0"
@@ -266,7 +279,7 @@ export default function Home() {
         />
         {/* glass overlay over the whole section */}
         <div className="absolute inset-0 bg-[#0c131ca9]" />
-        <div className="relative z-30 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-20 sm:py-28 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="relative z-30 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 pt-[200px] pb-20 sm:pb-28 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
               Devis

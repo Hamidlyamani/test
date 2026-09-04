@@ -1,11 +1,37 @@
+import Image from "next/image";
 import HeroSlider from "@/components/HeroSlider";
 import { business } from "@/lib/business";
 import { IconBadgeCert, IconShieldCheck, IconStar } from "@/components/Icons";
 
 export default function HeroReveal() {
   return (
-    <section id="hero" className="relative overflow-hidden bg-paper">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 py-16 sm:py-20 lg:min-h-[calc(100vh-61px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-10 lg:py-24 xl:px-6">
+    // overflow-x-clip et pas overflow-hidden : la carte inclinee ne doit pas
+    // provoquer de scroll horizontal, mais le fond doit rester libre de
+    // remonter sous le header transparent.
+    <section id="hero" className="relative overflow-x-clip bg-paper">
+      <div className="absolute inset-x-0 -top-[61px] bottom-0">
+        <Image
+          src="/images/chateau-angers-vue-aerienne.webp"
+          alt="Vue aérienne du château d'Angers et des toits en ardoise de la ville"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Voile en degrade : quasi opaque a gauche pour que le texte reste
+            lisible (le voile plat a 60% donnait 2,4 a 3,1:1, sous le seuil
+            WCAG AA de 4,5:1), transparent a droite pour laisser la photo
+            respirer derriere la carte. */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(241,242,244,0.95) 0%, rgba(241,242,244,0.92) 38%, rgba(241,242,244,0.60) 64%, rgba(241,242,244,0.40) 100%)",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 py-16 sm:py-20 lg:min-h-[calc(100vh-61px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-10 lg:py-24 xl:px-6">
         <HeroCopy />
         <div className="relative lg:px-6">
           <HeroSlider />

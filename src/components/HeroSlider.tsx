@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// Inclinaison de la carte. 20deg = demande explicite ; le reste du site
-// travaille entre 1 et 3deg (recouvrement d'ardoises). Une seule valeur a changer.
-const TILT = "lg:rotate-[20deg] lg:scale-[0.86]";
+// Inclinaison de la carte, desktop uniquement. Une seule valeur a changer.
+const TILT = "lg:rotate-[10deg] lg:scale-95";
 const DELAY = 4500;
+const FADE = 1100; // duree du fondu, en ms
 
 const slides = [
   {
@@ -52,9 +52,12 @@ export default function HeroSlider() {
         {slides.map((s, i) => (
           <div
             key={s.src}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-              i === index ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 transition-all ease-out ${
+              i === index
+                ? "scale-100 opacity-100"
+                : "scale-[1.06] opacity-0"
             }`}
+            style={{ transitionDuration: `${FADE}ms` }}
             aria-hidden={i !== index}
           >
             <Image
