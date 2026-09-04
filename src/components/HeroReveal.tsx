@@ -1,25 +1,14 @@
-import Image from "next/image";
+import HeroSlider from "@/components/HeroSlider";
 import { business } from "@/lib/business";
 import { IconBadgeCert, IconShieldCheck, IconStar } from "@/components/Icons";
 
 export default function HeroReveal() {
   return (
-    <section id="hero" className="relative bg-paper">
-      <div className="absolute inset-x-0 -top-[61px] bottom-0">
-        <Image
-          src="/images/chateau-angers-vue-aerienne.webp"
-          alt="Vue aérienne du château d'Angers et de la ville"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-paper/60" />
-      </div>
-
-      <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-center px-5 py-16 sm:py-20 lg:min-h-[calc(100vh-61px)] lg:px-10 xl:px-6">
-        <div>
-          <HeroCopy />
+    <section id="hero" className="relative overflow-hidden bg-paper">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 py-16 sm:py-20 lg:min-h-[calc(100vh-61px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-10 lg:py-24 xl:px-6">
+        <HeroCopy />
+        <div className="relative lg:px-6">
+          <HeroSlider />
         </div>
       </div>
     </section>
